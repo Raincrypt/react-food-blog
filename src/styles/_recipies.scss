@@ -1,0 +1,48 @@
+.featured_recipies{
+    background-image: url('../assets/bg_1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    .recipies_content{
+        backdrop-filter: blur(2px); // Blurs everything behind the element i.e applies to parent element
+        h2, p{
+            color: $white;
+        }
+    }
+}
+
+.recipe_wrap{
+    margin-top: 10px;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    padding-inline: 3rem;
+    .recipe_container{
+        cursor: pointer;
+        background-color: $white;
+        min-height: 480px;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0.5rem;
+        .recipe_image{
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .recipe_time{
+            display: flex;
+            gap: 0.5rem;
+            span{
+                padding: 2px;
+                background-color: rgb(209, 206, 206);
+                border-radius: 5px;
+                @media (max-width: $breakPoint) {
+                    &:last-of-type{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
